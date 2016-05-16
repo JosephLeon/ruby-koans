@@ -31,10 +31,6 @@ class AboutObjects < Neo::Koan
   end
 
   def test_small_integers_have_fixed_ids
-    puts 0.object_id
-    puts 1.object_id
-    puts 2.object_id
-    puts 100.object_id
     assert_equal 1, 0.object_id
     assert_equal 3, 1.object_id
     assert_equal 5, 2.object_id
@@ -48,7 +44,7 @@ class AboutObjects < Neo::Koan
     obj = Object.new
     copy = obj.clone
 
-    assert_equal __, obj           != copy
-    assert_equal __, obj.object_id != copy.object_id
+    assert_equal true, obj           != copy
+    assert_equal true, obj.object_id != copy.object_id
   end
 end
